@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather App</title>
+</head>
+<body>
+  <!-- 🌙 -->
+  <div class="page-control">
+    <div class="loading"><h2>Loading...</h2></div>
+
+    <button>☀️</button>
+
+    <section class="sectionOne section-flex">
+      <div class="weather">
+        <!-- <label for="main-weather">Weather:</label> -->
+        <h2  name="main-weather" class="main-weather"></h2>
+        <h4 class="weather-description"></h4>
+      </div>
+  
+      <div class="icon">
+        <i id="currrent-weather-icon"></i>
+      </div>
+    </section>
+  
+    <section class="sectionTwo section-flex">
+      <div class="extras">
+        <div class="context wind">
+          <label for="wind-speed">Wind Speed:</label>
+          <p name="wind-speed"></p>
+        </div>
+
+        <div class="context country">
+          <!-- <label for="country-name">Country:</label> -->
+          <p name="country-name"></p>
+        </div>
+      </div>
+  
+      <div class="context temperature">
+        <!-- <label for="main-temp">Temperature:</label> -->
+        <h3 name="main-temp" class="main-temp"></h3>
+      </div>
+    </section>
+
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
