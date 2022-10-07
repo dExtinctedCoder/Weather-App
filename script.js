@@ -33,6 +33,27 @@ const success =(currentLocation) => {
 
 const error =(err) => {
   console.log(`Error: ${err.message}`)
+  switch (err.code) {
+    case err.PERMISSON_DENIED:
+      doc.innerHTML = 
+      `<h2 style="text-align: center; font-size: 2.5rem; margin-top: 20vh;">User denied the request for Geolocation</h2>`
+      break;
+  
+    case err.POSITION_UNAVAILABLE:
+      `<h2 style="text-align: center; font-size: 2.5rem; margin-top: 20vh;">Location information unavailable<br>Please turn on your device location</h2>`
+      break;
+  
+    case err.TIMEOUT:
+      `<h2 style="text-align: center; font-size: 2.5rem; margin-top: 20vh;">Request timeout</h2>`
+      break;
+  
+    case err.UNKNOWN_ERROR:
+      `<h2 style="text-align: center; font-size: 2.5rem; margin-top: 20vh;">An unknown error occured</h2>`
+      break;
+  
+    default:
+      break;
+  }
 }
 
 const getInfo = () => {
